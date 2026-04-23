@@ -2,6 +2,8 @@
 
 This repository contains the code used to rerun the pediatric one-lung ventilation lung injury prediction analyses.
 
+The original patient data cannot be shared due to privacy and ethical restrictions. A sample input file is provided in `examples/sample_input_template.csv` to illustrate the expected data structure and allow users to test the code locally.
+
 ## Files
 
 - `run_full_pipeline.py`: end-to-end entry point for the rerun pipeline.
