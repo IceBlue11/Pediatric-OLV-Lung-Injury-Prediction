@@ -1,23 +1,57 @@
-# Pediatric OLV Lung Injury Prediction
+# Pediatric one-lung ventilation oxygenation model
 
-This repository contains the code used to rerun the pediatric one-lung ventilation lung injury prediction analyses.
+This repository contains the analysis code for a retrospective cohort study of early oxygenation impairment after pediatric one-lung ventilation (OLV).
 
-The original patient data cannot be shared due to privacy and ethical restrictions. A sample input file is provided in `examples/sample_input_template.csv` to illustrate the expected data structure and allow users to test the code locally.
+The primary analysis uses ridge logistic regression with ten candidate predictors available 30 minutes after OLV initiation. Elastic-net and LASSO logistic regression are included as secondary comparisons. Model performance is estimated with repeated nested cross-validation. Imputation, standardization, and hyperparameter tuning are fitted within the training portion of each resampling split.
 
-## Files
+## Repository contents
 
-- `run_full_pipeline.py`: end-to-end entry point for the rerun pipeline.
-- `train_rfecv_lr_model.py`: RFECV logistic regression training and comparison workflow.
-- `model_comparison_analysis.py`: six-model comparison analysis.
-- `model_subset_analysis.py`: compact predictor subset analysis.
-- `src/`: numbered post-processing and packaging steps used by the rerun pipeline.
+- `run_primary_analysis.py`: primary repeated nested cross-validation analysis, model comparisons, calibration, threshold summaries, and figures.
+- `run_sensitivity_analyses.py`: iterative-imputation, complete-case, and bootstrap optimism-correction analyses.
+- `requirements.txt`: Python package versions used for the analysis.
+- `results/`: aggregate reference results and figures from the reported analysis.
 
-## Usage
+## Data
 
-Run the full pipeline from the repository root:
+The patient-level workbook is not included in this public release. To rerun the
+analysis, place an appropriately approved analysis dataset at:
 
-```bash
-python3 run_full_pipeline.py
+```text
+data/original_data_p6e.xlsx
 ```
 
-Input data is expected under `data/raw/` and is intentionally excluded from version control.
+The archived reference results exclude patient-level out-of-fold prediction
+files. Local analysis runs generate those files in the selected output
+directory; do not redistribute them without the applicable data-sharing
+approval.
+
+## Environment
+
+Python 3.9--3.11 is recommended; the reported analysis used Python 3.9.6.
+
+```bash
+python -m venv .venv
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+## Run the analyses
+
+Primary analysis:
+
+```bash
+python run_primary_analysis.py
+```
+
+Sensitivity analyses:
+
+```bash
+python run_sensitivity_analyses.py
+```
+
+Default outputs are written to `results/primary` and `results/sensitivity`. Alternative paths can be provided explicitly:
+
+```bash
+python run_primary_analysis.py --input path/to/data.xlsx --output path/to/primary_results
+python run_sensitivity_analyses.py --input path/to/data.xlsx --output path/to/sensitivity_results
+```

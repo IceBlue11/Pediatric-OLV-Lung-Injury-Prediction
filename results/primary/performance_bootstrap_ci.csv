@@ -1,0 +1,13 @@
+﻿model,metric,point_estimate_from_mean_repeated_oof_probability,bootstrap_95_CI_low,bootstrap_95_CI_high,bootstrap_resamples,note
+elastic_net,AUC,0.6893261776982708,0.6024038461538461,0.7684891174716757,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+elastic_net,AUPRC,0.4897403137736226,0.39034804332080636,0.6098390348937511,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+elastic_net,Brier,0.18552166384402047,0.1685067267466131,0.2047093365135098,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+elastic_net,Log loss,0.5516567228515045,0.5098074120853681,0.5973219745027054,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+lasso,AUC,0.6797853309481217,0.5962954680977937,0.7595483005366727,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+lasso,AUPRC,0.4758410051231442,0.38289457736757776,0.5986560754973181,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+lasso,Brier,0.18797612944576078,0.17035101391868426,0.20644399441362543,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+lasso,Log loss,0.558117537060524,0.5153622761775671,0.6028727622666824,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+ridge,AUC,0.6951401311866428,0.6115049194991056,0.7799828562909956,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+ridge,AUPRC,0.5109204247214275,0.41306429086173924,0.6335829406643994,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+ridge,Brier,0.18415165226508887,0.16650599905912836,0.20070457911038714,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
+ridge,Log loss,0.5485526102746084,0.5062081886997045,0.589397740936326,2000,Patient-level stratified bootstrap of fixed mean repeated OOF predictions; pipeline was not refitted
