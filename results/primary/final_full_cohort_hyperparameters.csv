@@ -1,0 +1,4 @@
+﻿model,C,l1_ratio,n_selected
+ridge,0.2,,10
+elastic_net,0.2,0.2,10
+lasso,0.5,,8

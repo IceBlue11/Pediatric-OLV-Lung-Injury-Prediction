@@ -1,0 +1,11 @@
+﻿feature,source_column_or_columns,unit,derivation,missing_n,missing_percent
+Male sex,Is_male,0/1,direct,0,0.0
+Weight (kg),Weight,kg,direct,0,0.0
+Preoperative CRP,Preoperative CRP,source unit,direct,10,5.524861878453039
+Preoperative neutrophils,Preoperative Neutrophils,source unit,direct,10,5.524861878453039
+Driving pressure (OLV-30 min),Driving Pressure (OLV-30min),cmH2O,direct; checked against Pplat - PEEP,9,4.972375690607735
+PEEP (OLV-30 min),PEEP (OLV-30min),cmH2O,direct,9,4.972375690607735
+PaCO2 (OLV-30 min),PaCO2 (OLV-30min),mmHg,direct,15,8.287292817679557
+Blood base excess (OLV-30 min),Base Excess of Blood (OLV-30min)	,mmol/L,direct,16,8.83977900552486
+Heart rate (OLV-30 min),Heart Rate (OLV-30min),beats/min,direct,9,4.972375690607735
+Ti/Ttot (OLV-30 min),Ti/Ttot (OLV-30min),ratio,direct; checked against Inspiratory Time × RR / 60,9,4.972375690607735

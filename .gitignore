@@ -1,26 +1,22 @@
-.venv/
-.venv312/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-data/
-results/
-
-*.pdf
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv*/
+venv/
+.idea/
+.vscode/
+.env
+.env.*
+.DS_Store
+Thumbs.db
 *.zip
+*.pdf
 
-*.aux
-*.bbl
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
+# Patient-level source data are never versioned.
+data/
 
-feature_select.svg
-roc_curve.svg
-feature_importance.svg
-comparison_results.svg
-cm_*.svg
+# Analysis runs may create patient-level out-of-fold predictions. Keep the
+# aggregate reference results, but never version these row-level outputs.
+results/**/*oof_predictions*.csv

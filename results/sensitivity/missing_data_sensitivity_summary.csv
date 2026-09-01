@@ -1,0 +1,3 @@
+﻿analysis,n,events,AUC,AUPRC,Brier,Log loss
+Five posterior-sampling iterative imputations within each resampling split,181,52,0.6721824686940966,0.5007301561099259,0.1857671289393496,0.5530478161320344
+Complete-case nested five-fold CV,151,45,0.6960167714884695,0.5310369647206279,0.18820385178697166,0.5561619692052856
